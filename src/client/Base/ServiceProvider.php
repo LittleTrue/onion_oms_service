@@ -6,10 +6,9 @@ use GuzzleHttp\Client as GuzzleHttp;
 use GuzzleHttp\RequestOptions;
 use Pimple\Container;
 use Pimple\ServiceProviderInterface;
-use Symfony\Component\Cache\Simple\RedisCache;
 
 /**
- * Class ServiceProvider
+ * Class ServiceProvider.
  */
 class ServiceProvider implements ServiceProviderInterface
 {
@@ -17,13 +16,12 @@ class ServiceProvider implements ServiceProviderInterface
     {
         $app['http_client'] = function ($app) {
             return new GuzzleHttp([
-                RequestOptions::TIMEOUT => 60,                
+                RequestOptions::TIMEOUT => 60,
             ]);
         };
 
         $app['credential'] = function ($app) {
             return new Credential($app);
         };
-        
     }
 }

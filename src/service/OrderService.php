@@ -1,4 +1,5 @@
 <?php
+
 namespace onion\OmsService;
 
 use onion\OmsClient\Application;
@@ -36,8 +37,8 @@ class OrderService
             throw new ClientError('数组参数缺失', 1000001);
         }
 
-        $response =  $this->orderClient->batchOrderInfo($infos);
-        
+        $response = $this->orderClient->batchOrderInfo($infos);
+
         return $response['msg'];
     }
 }

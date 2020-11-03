@@ -6,7 +6,7 @@ use GuzzleHttp\Psr7\Response;
 use onion\OmsClient\Base\Exceptions\ClientError;
 
 /**
- * Trait MakesHttpRequests
+ * Trait MakesHttpRequests.
  */
 trait MakesHttpRequests
 {
@@ -45,11 +45,10 @@ trait MakesHttpRequests
         }
         $result = json_decode($response->getBody()->getContents(), true);
 
-        //返回代码:0 成功,300-399 验证失败,400-499 业务异常,500+ 系统异常 
-        if ($result['code'] == 0) {
+        //返回代码:0 成功,300-399 验证失败,400-499 业务异常,500+ 系统异常
+        if (0 == $result['code']) {
             return $result;
-        } else {
-            throw new ClientError($result['msg'], $result['code']);
         }
+        throw new ClientError($result['msg'], $result['code']);
     }
 }

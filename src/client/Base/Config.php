@@ -5,9 +5,8 @@ namespace onion\OmsClient\Base;
 use Adbar\Dot;
 
 /**
- * Class Config
+ * Class Config.
  */
 class Config extends Dot
 {
-    
 }

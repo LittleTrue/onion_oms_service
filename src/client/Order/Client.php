@@ -4,7 +4,6 @@ namespace onion\OmsClient\Order;
 
 use onion\OmsClient\Application;
 use onion\OmsClient\Base\BaseClient;
-use onion\OmsClient\Base\Exceptions\ClientError;
 
 /**
  * 订单请求陆海港申报系统
@@ -17,7 +16,7 @@ class Client extends BaseClient
     }
 
     /**
-     * 推送1210订单
+     * 推送1210订单.
      */
     public function batchOrderInfo(array $infos)
     {

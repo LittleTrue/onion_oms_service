@@ -1,4 +1,5 @@
 <?php
+
 namespace onion\OmsClient\Base;
 
 use GuzzleHttp\RequestOptions;
@@ -45,7 +46,7 @@ class Credential
     //     return $token;
     // }
 
-    /** 
+    /**
      * Get token - 快速通信 -- 基于持久化用户token.
      *
      * @throws ClientError
@@ -73,8 +74,8 @@ class Credential
     protected function credentials()
     {
         return [
-            'username'  => $this->app['config']->get('user_name'),
-            'passwd'    => $this->app['config']->get('passwd'),
+            'username' => $this->app['config']->get('user_name'),
+            'passwd'   => $this->app['config']->get('passwd'),
         ];
     }
 

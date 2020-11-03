@@ -6,7 +6,7 @@ use onion\OmsClient\Base\Config;
 use Pimple\Container;
 
 /**
- * Class Application
+ * Class Application.
  */
 class Application extends Container
 {
@@ -19,7 +19,7 @@ class Application extends Container
     ];
 
     /**
-     * Application constructor
+     * Application constructor.
      */
     public function __construct(array $config = [])
     {
@@ -40,7 +40,7 @@ class Application extends Container
     }
 
     /**
-     * Register providers
+     * Register providers.
      */
     protected function registerProviders()
     {
