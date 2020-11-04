@@ -41,4 +41,17 @@ class OrderService
 
         return $response['msg'];
     }
+
+    /**
+     * 进口订单申报状态查询
+     */
+    public function queryOrder(array $infos)
+    {
+        if (empty($infos)) {
+            throw new ClientError('参数缺失', 1000001);
+        }
+
+        $response = $this->orderClient->queryOrder($infos);
+        return $response['data'];
+    }
 }
